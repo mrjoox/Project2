@@ -9,6 +9,9 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.Huntur.hello"
+    },
+    "cordova-plugin-qrscanner": {
+      "PACKAGE_NAME": "com.Huntur.hello"
     }
   },
   "dependent_plugins": {}

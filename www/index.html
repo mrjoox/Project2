@@ -7,9 +7,7 @@
   <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   <script src="ejs.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
   <script src="cordova.js"></script>
   <script>
     // Initialize Firebase
@@ -29,6 +27,19 @@
     db.settings({
       timestampsInSnapshots: true
     });
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (user) {
+        // User is signed in.
+        //send user to home.html
+        // ...
+        window.location.href = 'home.html'
+      } else {
+        // User is signed out.
+        //send user to home.html
+        // ...
+        window.location.href = 'login.html'
+      }
+    });
   </script>
   <style>
     .toolbaricon {
@@ -42,7 +53,7 @@
 
 
 <body>
-
+ 
 
 </body>
 
