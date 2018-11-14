@@ -1,4 +1,4 @@
-#Tue Oct 30 15:20:41 ICT 2018
-base.0=D\:\\140-390\\hellocordova\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+#Wed Nov 14 09:43:12 ICT 2018
+base.0=D\:\\977-341\\hellocordova\\cordova\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

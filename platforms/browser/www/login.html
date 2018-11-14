@@ -12,13 +12,13 @@
     <script>
         // Initialize Firebase
         var config = {
-            apiKey: "AIzaSyAM8Oro8zBvD0US2xpEez2z4-l_DQHstIM",
-            authDomain: "shopee-1.firebaseapp.com",
-            databaseURL: "https://shopee-1.firebaseio.com",
-            projectId: "shopee-1",
-            storageBucket: "shopee-1.appspot.com",
-            messagingSenderId: "641889602156"
-        };
+      apiKey: "AIzaSyDTB0ZYE8IoysrmLsn6RvQHn4cSWAfPmPA",
+      authDomain: "shopee-56e5c.firebaseapp.com",
+      databaseURL: "https://shopee-56e5c.firebaseio.com",
+      projectId: "shopee-56e5c",
+      storageBucket: "shopee-56e5c.appspot.com",
+      messagingSenderId: "245540693945"
+    };
         firebase.initializeApp(config);
         // Initialize Cloud Firestore through Firebase
         var db = firebase.firestore();
@@ -55,12 +55,40 @@
             <p style="margin-top: 30px;">
                 <ons-button onclick="google()">Sign in google</ons-button>
             </p>
+            <p style="margin-top: 30px;">
+                <ons-button onclick="facebook()">Sign in  facebook</ons-button>
+            </p>
             <p>
                 <a href="register.html">sign uo for a new user</a>
             </p>
         </div>
     </ons-page>
     <script>
+        
+        function facebook() {
+        var provider = new firebase.auth.FacebookAuthProvider();
+        firebase.auth().signInWithRedirect(provider);
+        firebase.auth().getRedirectResult().then(function (result) {
+            if (result.credential) {
+                // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+                var token = result.credential.accessToken;
+                // ...
+            }
+            // The signed-in user info.
+            var user = result.user;
+        }).catch(function (error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // The email of the user's account used.
+            var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
+            var credential = error.credential;
+            // ...
+        });
+
+    }
+    
         var login = function () {
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;

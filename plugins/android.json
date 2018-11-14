@@ -7,10 +7,22 @@
     "files": {}
   },
   "installed_plugins": {
+    "cordova-plugin-qrscanner": {
+      "PACKAGE_NAME": "com.Huntur.hello"
+    },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.Huntur.hello"
     },
-    "cordova-plugin-qrscanner": {
+    "cordova-plugin-buildinfo": {
+      "PACKAGE_NAME": "com.Huntur.hello"
+    },
+    "cordova-universal-links-plugin": {
+      "PACKAGE_NAME": "com.Huntur.hello"
+    },
+    "cordova-plugin-browsertab": {
+      "PACKAGE_NAME": "com.Huntur.hello"
+    },
+    "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "com.Huntur.hello"
     }
   },
